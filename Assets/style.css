@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    font-family: 'Fragment Mono', monospace;
+  }
+  
+header {
+  background-color: #000;
+  text-align: center;
+}
+header li {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    list-style: none;
+    margin-right: 1em;
+    font-size: 20px;
+    color: #fff;
+  }
+  
+section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+#text-message {
+    font-size: 35px;
+}
+.infos {
+  padding-top: 5rem;
+  padding-left: 10rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+ }
+
+.infos h1 {
+  font-size: 3rem;
+  margin-left: 7px;
+}
+
+.infos h2 {
+  font-size: 2rem;
+  margin-left: 7px;
+}
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+#photo {
+  width: 22rem;
+  height: 22rem;
+  float: right;
+  padding-right: 18rem;
+  animation: 6s ease-in-out 0s infinite normal none running float;
+}
+.icons-favicon img {
+  padding-top: 3rem;
+  width: 4rem;
+  height: 4rem;
+}
+.about {
+  padding-left: 10rem;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+
+}
+.about div{
+  overflow: auto;
+}
+
+.about img{
+  float: left;
+  margin-right: 20px; 
+  width: 20rem;
+  height: 20rem;
+}
+
+.about h1{
+  font-size: 3rem;
+  margin-left: 7px;
+  padding-bottom: 1rem;
+}
+.about p {
+  font-size: 1rem;
+  margin-left: 8rem;
+}
+
+ .skills {
+  text-align: center;
+  background-color: #c1c1c1;
+  flex-wrap: wrap;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-bottom: 5em;
+}
+
+.skills h1 {
+  font-size: 3rem;
+  margin-left: 7px;
+  padding-bottom: 1rem;
+}
+
+.skill-image {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skill-image div {
+  margin-right: 30px;
+  margin-left: 30px;
+  
+}
+
+.skills #language {
+  color: #fff;
+  background-color: #212121;
+  width: 12rem;
+  height: 9rem;
+  cursor: pointer;
+  border-radius: 1em;
+  transition: 0.2s;
+  padding-top: 30px;
+  margin: 15px;
+}
+.skills img {
+  padding-top: 10px;
+  width: 8rem;
+  height: 6rem;
+} 
+footer {
+  background-color: #808080;
+
+}
+
+.footer-content {
+  display: flex;
+  margin: 0 68px 0 68px;
+  font-family: "Times New Roman";
+  font-size: 10px;
+  text-decoration: none solid rgb(0, 0, 0);
+  word-spacing: 0px;
+  transform: none;
+  transition: all 0s ease 0s;
+}
+.footer-content h1 {
+  font-size: 2rem;
+  
+}
+.email,
+.cell {
+  margin: 40px;
+}
+.email,
+.cell img  {
+  height: 137px;
+  width: 174.219px;
+}
+
+.email,
+.cell  p {
+  font-size: 10px;
+}
+
+.div-contacts {
+  height: 137px;
+width: 719.922px;
+min-height: auto;
+min-width: auto
+}
