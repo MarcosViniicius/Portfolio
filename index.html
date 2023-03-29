@@ -5,13 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Marcos Vinicius</title>
-    <link rel="stylesheet" href="Assets/style.css" type="text/css" />
+    <link rel="stylesheet" href="Assets/css/style.css"/>
+    <link rel="stylesheet" media="screen and (max-width:768px)" href="Assets/css/mobile.css"/>
+
   </head>
   <body>
-    <header>
+    <header id="dark">
       <ul>
         <a href="index.html"><li>Home</li></a>
-        <a href="projects.html"><li>Projects</li></a>
+        <a href="projects.html"><li id="dark">Projects</li></a>
+        <div class="container" id="dark" id="darkmode">
+          <div class="btn"></div>
+        </div>
       </ul>
       <hr />
     </header>
@@ -22,16 +27,16 @@
           <h2>I am Marcos</h2>
           <h2>A Web-developer!</h2>
           <div class="icons-favicon">
-            <a href="https://www.instagram.com/_marcoslucena/" target="_blank"
-              ><img src="Images/icon-instagram-96.png"
+            <a href="https://www.instagram.com/_marcoslucena/" target="_blank" 
+              ><img src="Images/icon-instagram-96.png" id="favicon"
             /></a>
             <a
               href="https://www.linkedin.com/in/marcosvinicius1/"
-              target="_blank"
-              ><img src="Images/icon-linkedin-96.png"
+              target="_blank" 
+              ><img src="Images/icon-linkedin-96.png" id="favicon"
             /></a>
-            <a href="https://github.com/MarcosViniicius" target="_blank"
-              ><img src="Images/icon-github-96.png"
+            <a href="https://github.com/MarcosViniicius" target="_blank" 
+              ><img src="Images/icon-github-96.png" id="favicon"
             /></a>
           </div>
         </div>
@@ -65,23 +70,24 @@
       <br>
       <br>
       <br>
-    </form>
-  </section>
+      <script src="Assets/js/script.js"></script>
+
 </main>
+
 <footer>
   <h1>Contacts</h1>
 <div class="footer-content">
   <div class="div-contacts">
-  <div class="email">
-    <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="Images/message.svg"></a>
-    <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><p>E-mail</p></a>
-    <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><p >marcosvinicius.lucena27@gmail.com</p></a>
-  </div>
-  <div class="cell">
-    <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="Images/telefone.svg"></a>
-    <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><p>Telefone</p></a>
-    <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><p>(84) 98759-2270</p></a>
-  </div>
+    <div class="email">
+      <div id="fundo-email"><a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="Images/message.svg"></a></div>
+      <!-- <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><p>E-mail</p></a>
+      <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><p >@gmail.com</p></a> -->
+    </div>
+    <div class="cell">
+      <div id="fundo-cell"><a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="Images/telefone.svg"></a></div>
+      <!-- <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><p>Telefone</p></a>
+      <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><p>(84) 98759-2270</p></a> -->
+    </div>
 </div>
 </footer>
   </body>
