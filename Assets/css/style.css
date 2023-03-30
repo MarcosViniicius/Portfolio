@@ -7,11 +7,31 @@
     font: inherit;
     vertical-align: baseline;
     font-family: 'Fragment Mono', monospace;
+    scroll-behavior:smooth;
+  }
+
+body::-webkit-scrollbar {
+    width: 18px;       
+    height: 1px;     
   }
   
+body::-webkit-scrollbar-track {
+    background: rgb(255, 255, 255);       
+  }
+  
+body::-webkit-scrollbar-thumb {
+    background-color: #000000;  
+    border-radius: 20px;      
+    border: 3px solid rgb(255, 255, 255);  
+  }
+
+
 main {
   background-color: #ffffff;
+  transition: 1s;
+  scroll-behavior:smooth;
 }
+
 
 header {
   background-color: #000;
@@ -26,7 +46,11 @@ header li {
     font-size: 20px;
     color: #fff;
   }
-  
+header li:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }  
 section form {
     display: flex;
     flex-direction: column;
@@ -63,7 +87,14 @@ section form {
   height: 22rem;
   float: right;
   padding-right: 18rem;
-  animation: 6s ease-in-out 0s infinite normal none running float;
+  transition: 1s;
+
+}
+#photo:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 1s;
 }
 .icons-favicon img {
   padding-top: 3rem;
@@ -78,7 +109,7 @@ section form {
 }
 .about div{
   overflow: auto;
-}
+  }
 
 .about img{
   float: left;
@@ -158,7 +189,6 @@ footer h1 {
 .footer-content {
   display: flex;
   margin: 0 68px 0 68px;
-  font-family: "Times New Roman";
   font-size: 10px;
   text-decoration: none solid rgb(0, 0, 0);
   word-spacing: 0px;
@@ -172,7 +202,11 @@ footer h1 {
 
 .email,
 .cell {
+  flex-direction: column;
   margin: 60px;
+  display: flex;
+  text-align: center;
+  align-items: center;
 }
 
 .cell img  {
@@ -184,15 +218,53 @@ footer h1 {
   width: 34px;
 }
 
-.email,
-.cell  p {
-  font-size: 10px;
+
+#tittle-email {
+  text-decoration: none;
+  margin-top: 10px;  
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
+
 }
 
-.cell {
-
+#tittle-cell {
+  text-decoration: none;
+  margin-top: 10px;  
+  font-size: 15px;
+  font-weight: bold;
+  color: #ffffff;
 
 }
+
+#email {
+  text-decoration: none;
+  margin-top: 10px;  
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+#number {
+  text-decoration: none;
+  margin-top: 10px;  
+  font-size: 0.8rem;
+  color: #ffffff;
+  font-weight: 500;
+
+}
+.cell:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.email:hover {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+
 #fundo-cell {
   background: #fff;
   width: 50px;
@@ -235,6 +307,7 @@ footer h1 {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  
 }
 
 #favicon {
@@ -250,10 +323,95 @@ footer h1 {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  transition: all 0.3s;
 }
 
-        
-.container {
+/* dark theme */
+
+.dark main {
+  background: #000000;
+  color: #fff;
+  transition: 1s;
+}
+.dark .skills {
+  background: #292c35;
+  color: #fff;
+  transition: 1s;
+
+} 
+.dark footer {
+  background: #17181c;
+  color: #fff;
+  transition: 1s;
+
+
+}
+.dark .icons-favicon {
+  filter: invert(100%) sepia(0%) saturate(7490%) hue-rotate(344deg) brightness(104%) contrast(104%);
+  transition: 1s;
+
+}
+
+.change-theme {
+  float: right;
+  margin-right: 30px;
+  margin-top: -40px;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  border: 1.67px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  height: 12px;
+  width: 40px;
+  transform: scale(1.5);
+
+}
+
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  height:18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(29px);
+}
+
+.fa-moon {
+  color: #ffffff;
+}
+.fa-sun {
+  color: #ffffff;
+  opacity: 0;
+  transition: 1s;
+
+}
+.dark .fa-sun {
+  opacity: 1;
+  transition: 1s;
+}
+.dark .fa-moon {
+  opacity: 0;
+  transition: 1s;
+}
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,4 +450,4 @@ footer h1 {
 }
 header.active {
   background: #ffffff;
-}
+} */

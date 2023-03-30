@@ -1,7 +1,5 @@
-const btn = document.querySelector(".btn");
-const container = document.querySelector("#dark");
+const changeThemeBtn = document.querySelector("#chk");
 
-btn.onclick = function () {
-  this.classList.toggle("active");
-  container.classList.toggle("active");
-};
+changeThemeBtn.addEventListener("change", function () {
+  document.body.classList.toggle("dark");
+});
