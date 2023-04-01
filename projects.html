@@ -1,13 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Minha Página</title>
   </head>
   <body>
-    HELLO
-    <details></details>
+    <h1>Bem-vindo à minha página!</h1>
+    <p>
+      Esse é um exemplo de página que oferece suporte a dois idiomas: português
+      e inglês.
+    </p>
+
+    <!-- Lista suspensa de idiomas -->
+    <label for="language-select">Idioma:</label>
+    <select id="language-select" onchange="changeLanguage()">
+      <option value="pt" selected>Português</option>
+      <option value="en">English</option>
+    </select>
+
+    <!-- Conteúdo em português -->
+    <div class="pt">
+      <h2>Seção em português</h2>
+      <p>
+        Esse é o conteúdo em português. Aqui você pode escrever tudo o que
+        quiser nesse idioma.
+      </p>
+    </div>
+
+    <!-- Conteúdo em inglês -->
+    <div class="en" style="display: none">
+      <h2>English section</h2>
+      <p>
+        This is the content in English. Here you can write anything you want in
+        this language.
+      </p>
+    </div>
+
+    <script>
+      // Função que alterna o idioma da página
+      function changeLanguage() {
+        // Obtém o valor selecionado na lista suspensa de idiomas
+        var selectedLanguage = document.getElementById("language-select").value;
+
+        // Obtém o elemento que contém o conteúdo em português
+        var ptContent = document.getElementsByClassName("pt");
+
+        // Obtém o elemento que contém o conteúdo em inglês
+        var enContent = document.getElementsByClassName("en");
+
+        // Verifica qual idioma foi selecionado e exibe o conteúdo correspondente
+        if (selectedLanguage === "pt") {
+          // Exibe o conteúdo em português e oculta o conteúdo em inglês
+          for (var i = 0; i < ptContent.length; i++) {
+            ptContent[i].style.display = "block";
+          }
+          for (var i = 0; i < enContent.length; i++) {
+            enContent[i].style.display = "none";
+          }
+        } else {
+          // Exibe o conteúdo em inglês e oculta o conteúdo em português
+          for (var i = 0; i < ptContent.length; i++) {
+            ptContent[i].style.display = "none";
+          }
+          for (var i = 0; i < enContent.length; i++) {
+            enContent[i].style.display = "block";
+          }
+        }
+      }
+    </script>
   </body>
 </html>

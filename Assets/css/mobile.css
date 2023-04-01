@@ -15,6 +15,9 @@ header ul div {
   padding-right: 0;
 }
 
+.icons-favicon img {
+  margin-top: -25px;
+}
 .infos {
   padding: 1rem;
   display: flex;
@@ -48,7 +51,7 @@ header ul div {
   margin-left: 30px;
 }
 
-.skills #language {
+.skills #code_icon {
   color: #fff;
   background-color: #212121;
   width: 8rem;
@@ -87,6 +90,7 @@ header ul div {
   font-size: 1rem;
   text-align: justify;
   margin: 0.5rem 0;
+  text-align: center;
 }
 
 .change-theme {
