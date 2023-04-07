@@ -7,18 +7,25 @@
     <title>Marcos Vinicius</title>
     <link rel="stylesheet" href="Assets/css/style.css"/>
     <link rel="stylesheet" media="screen and (max-width:768px)" href="Assets/css/mobile.css"/>
-    <script src="Assets/js/script.js" defer></script>
+    <script src="Assets/js/change_theme.js" defer></script>
+    <script src="Assets/js/change_language.js" defer></script>
+    <script src="Assets/js/animated_text.js" defer></script>
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
     <script crossorigin="anonymous" integrify="" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
-
   </head>
   <body>
+
     <header>
       <ul>
-
+        <!-- <select id="language-select" onchange="changeLanguage()">
+          <option value="pt" selected>Português</option>
+          <option value="en">English</option>
+        </select> -->
         <div>
-        <a href="index.html"><li>início</li></a>
-        <a href="projects.html"><li>Projetos</li></a>
+        <a id="home" href="index.html" class="pt"><li>início</li></a>
+        <a id="home" href="index.html" class="en" style="display: none;"><li>Home</li></a>
+        <a href="projects.html" class="pt"><li>Projetos</li></a>
+        <a href="projects.html" class="en" style="display: none"><li>Projects</li></a>
     </div>
     <div class="change-theme">
       <input type="checkbox" class="checkbox" id="chk" />
@@ -32,11 +39,13 @@
       <hr />
     </header>
     <main>
+      
       <div class="infos">
         <div class="texts">
           <h1>Olá, eu sou o </h1>
           <h2>Marcos</h2>
-          <h3 class="typedtext">Desenvolvedor web</h3>
+          <h3 class="typedtext" data="pt""pt">Desenvolvedor web</h3>
+          <h3 class="typedtext" data="en" style="display: none">Web Developer</h3>
           <div class="icons-favicon">
             <a href="https://www.instagram.com/_marcoslucena/" target="_blank" 
               ><img src="Images/icon-instagram-96.png" id="favicon"
@@ -84,14 +93,19 @@
   <div class="footer-content">
     <div class="div-contacts">
       <div class="email">
-      <div id="fundo-email"><a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="Images/message.svg"></a></div>
+      <div id="fundo-email">
+        <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="Images/message.svg"></a>
+      </div>
       <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="tittle-email"><p>E-mail</p></a>
       <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="email"><p >marcosvinicius.lucena27@gmail.com</p></a> 
     </div>
+
     <div class="cell">
-      <div id="fundo-cell"><a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="Images/telefone.svg"></a></div>
-      <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="tittle-cell"><p>Telefone</p></a> 
-      <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="number"><p>(84) 98759-2270</p></a> 
+      <div id="fundo-cell">
+        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="Images/telefone.svg"></a>
+      </div>
+        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="tittle-cell"><p>Telefone</p></a> 
+        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="number"><p>(84) 98759-2270</p></a> 
     </div>
 </div>
 </footer>
