@@ -1,19 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>EM DESENVOLVIMENTO...</title>
+    <style>
+      /* Estilo para a página em desenvolvimento */
+      body {
+        background-color: #f1f1f1;
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .entrada {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      .rotacao {
+        animation: rotacao 1s infinite;
+      }
+
+      @keyframes rotacao {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .container {
+        text-align: center;
+      }
+
+      .titulo {
+        font-size: 48px;
+        color: #333;
+      }
+
+      .mensagem {
+        font-size: 24px;
+        color: #777;
+        margin-top: 20px;
+      }
+
+      .entrada {
+        animation: entrada 1s forwards;
+      }
+
+      @keyframes entrada {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      /* Estilos responsivos */
+      @media screen and (max-width: 768px) {
+        .titulo {
+          font-size: 36px;
+        }
+
+        .mensagem {
+          font-size: 18px;
+        }
+      }
+
+      /* Estilos para os links de navegação */
+      a {
+        text-decoration: none;
+        color: #333;
+        padding: 8px 16px;
+        background-color: #f9f9f9;
+        margin-bottom: 4px; /* Adicionado margem inferior para separar os links verticalmente */
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+      }
+
+      a:hover {
+        background-color: #ddd;
+      }
+
+      /* Estilos para a lista de navegação */
+      .a {
+        display: flex;
+        align-items: center; /* Centralizado verticalmente */
+        justify-content: space-between; /* Adicione esta linha */
+        margin-bottom: 20px;
+      }
+
+      li {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
   </head>
   <body>
-    <header>
-      <div>
-        <a id="home" href="/" class="pt"><li>início</li></a>
-        <!-- <a id="home" href="index.html" class="en" style="display: none;"><li>Home</li></a> -->
-        <a href="projects" class="pt"><li>Projetos</li></a>
-        <!-- <a href="projects.html" class="en" style="display: none"><li>Projects</li></a> -->
+    <div class="container">
+      <div class="a">
+        <a id="home" href="/" class="pt entrada"><li>início</li></a>
+        <a href="projects" class="pt entrada"><li>Projetos</li></a>
       </div>
-    </header>
+      <h1 class="titulo entrada">EM DESENVOLVIMENTO...</h1>
+      <div class="animacao rotacao entrada">Aguarde...</div>
+    </div>
   </body>
 </html>
