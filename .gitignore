@@ -1,1 +1,39 @@
 .vercel
+# Arquivos de sistema
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de ambiente virtual
+venv/
+env/
+*.pyc
+
+# Arquivos de configuração local
+instance/
+config.py
+
+# Arquivos de registro
+*.log
+
+# Dependências
+lib/
+lib64/
+bin/
+include/
+*.egg-info/
+*.egg
+*.pyc
+*.pyo
+*.so
+*.pyd
+
+# Arquivos de cache
+__pycache__/
+
+# Arquivos de upload
+uploads/
+
+# Arquivos de ambiente
+.env
