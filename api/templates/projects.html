@@ -1,116 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>EM DESENVOLVIMENTO...</title>
-    <style>
-      /* Estilo para a página em desenvolvimento */
-      body {
-        background-color: #f1f1f1;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        padding: 0;
-      }
-      .entrada {
-        opacity: 0;
-        transform: translateY(20px);
-      }
+<html lang="pt-br">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Projetos</title>
+      <link rel="stylesheet" href="/static/css/style.css" />
+      <link rel="stylesheet" href="/static/css/projects.css" />
+      <link rel="stylesheet" media="screen and (max-width:768px)" href="/static/css/mobile-projects.css"/>
+      <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
+      <script crossorigin="anonymous" integrify="" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
 
-      .rotacao {
-        animation: rotacao 1s infinite;
-      }
 
-      @keyframes rotacao {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
+      <script src="/static/js/change_theme.js" defer></script>
 
-      .container {
-        text-align: center;
-      }
 
-      .titulo {
-        font-size: 48px;
-        color: #333;
-      }
+    </head>
+    <body>
+      <header>
+        <div class="a">
+          <a id="home" href="/" class="pt entrada"><li>início</li></a>
+          <a href="projects" class="pt entrada"><li>Projetos</li></a>
+        </div>
+        <div class="change-theme">
+          <input type="checkbox" class="checkbox" id="chk" />
+          <label class="label" for="chk">
+            <i class="fas fa-sun"></i>
+            <i class="fas fa-moon"></i>
+            <div class="ball"></div>
+          </label>
+        </div>
+      </header>
+      <hr />
 
-      .mensagem {
-        font-size: 24px;
-        color: #777;
-        margin-top: 20px;
-      }
-
-      .entrada {
-        animation: entrada 1s forwards;
-      }
-
-      @keyframes entrada {
-        0% {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        100% {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      /* Estilos responsivos */
-      @media screen and (max-width: 768px) {
-        .titulo {
-          font-size: 36px;
-        }
-
-        .mensagem {
-          font-size: 18px;
-        }
-      }
-
-      /* Estilos para os links de navegação */
-      a {
-        text-decoration: none;
-        color: #333;
-        padding: 8px 16px;
-        background-color: #f9f9f9;
-        margin-bottom: 4px; /* Adicionado margem inferior para separar os links verticalmente */
-        border-radius: 4px;
-        transition: background-color 0.3s ease;
-      }
-
-      a:hover {
-        background-color: #ddd;
-      }
-
-      /* Estilos para a lista de navegação */
-      .a {
-        display: flex;
-        align-items: center; /* Centralizado verticalmente */
-        justify-content: space-between; /* Adicione esta linha */
-        margin-bottom: 20px;
-      }
-
-      li {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1 class="titulo entrada">EM DESENVOLVIMENTO...</h1>
-      <div class="animacao rotacao entrada">Aguarde...</div>
+      <main>
+        <div class="container">
+          <div class="page-inner-content">
+            <h1 class="title">PROJETOS</h1>
+            <div class="subtitle-underline"></div>
+            <div class="cols cols-4">
+              <div class="project">
+                <p class="project-name">ExemplIFiqui</p>
+                <a href="https://exemplifiqui-projeto.vercel.app/"
+                  ><img
+                    src="/static/Images/projects/projeto-exemplifiqui.png"
+                    alt=""
+                /></a>
+                <p class="project-desc">
+                  Projeto em desenvolvimento voltado para o ensino de química e
+                  matemática.
+                </p>
+              </div>
+              <div class="project">
+                <p class="project-name">Guardiões da Galáxia</p>
+                <a
+                  href="https://marcosviniicius.github.io/projeto-guardioes-da-galaxia/"
+                  ><img
+                    src="/static/Images/projects/projeto-guardioes.png"
+                    alt=""
+                /></a>
+                <p class="project-desc">
+                  Projeto de hub de escolha de personagens dos Guardiões da
+                  Galáxia.
+                </p>
+              </div>
+              <div class="project">
+                <p class="project-name">LojaTech</p>
+                <a href="https://marcosviniicius.github.io/LojaTech/"
+                  ><img
+                    src="/static/Images/projects/projeto-lojatech.png"
+                    alt=""
+                /></a>
+                <p class="project-desc">
+                  Projeto de E-Commerce com produtos de informática.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </body>
+    <footer>
+      <div class="footer-content">
+        <div class="div-contacts">
+          <div class="email">
+          <div id="fundo-email">
+            <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="/static/Images/message.svg"></a>
+          </div>
+          <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="tittle-email"><p>E-mail</p></a>
+          <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="email"><p >marcosvinicius.lucena27@gmail.com</p></a> 
+        </div>
+    
+        <div class="cell">
+          <div id="fundo-cell">
+            <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="/static/Images/telefone.svg"></a>
+          </div>
+            <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="tittle-cell"><p>Telefone</p></a> 
+            <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="number"><p>(84) 98759-2270</p></a> 
+        </div>
     </div>
-  </body>
+    </footer>
+  </html>
 </html>
-<div class="a">
-  <a id="home" href="/" class="pt entrada"><li>início</li></a>
-  <a href="projects" class="pt entrada"><li>Projetos</li></a>
-</div>

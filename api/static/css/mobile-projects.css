@@ -1,0 +1,90 @@
+/* Adicionando regra de media query para dispositivos móveis */
+.title {
+  padding: 3rem 0;
+  font-size: 1.5rem;
+}
+
+.project img {
+  width: 100%;
+}
+
+.cols {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+.project {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.change-theme {
+  margin-right: 10px;
+  margin-top: -30px;
+}
+
+.label {
+  height: 8px;
+  width: 30px;
+  transform: scale(1.2);
+}
+
+.label .ball {
+  height: 12px;
+  width: 12px;
+}
+.change-theme {
+  float: right;
+  margin-right: 30px;
+  margin-top: -40px;
+}
+.checkbox {
+  opacity: 0;
+  position: absolute;
+}
+
+.label {
+  border: 1.67px solid #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  position: relative;
+  height: 10px;
+  width: 40px;
+  transform: scale(1.5);
+}
+
+.label .ball {
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: 1px;
+  left: 2px;
+  height: 18px;
+  width: 18px;
+  transform: translateX(0px);
+  transition: transform 0.3s linear;
+}
+
+.checkbox:checked + .label .ball {
+  transform: translateX(28px);
+}
+
+.fa-moon {
+  color: #ffffff;
+}
+.fa-sun {
+  color: #ffffff;
+  opacity: 0;
+  transition: 1s;
+}
+.a {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.project img {
+  width: 18 rem;
+}
