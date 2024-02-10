@@ -40,8 +40,8 @@ header li {
   padding-bottom: 20px;
   display: inline-block;
   list-style: none;
-  margin-right: 1em;
   font-size: 20px;
+  padding: 20px;
   color: #fff;
 }
 header li:hover {
@@ -49,6 +49,7 @@ header li:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
 }
+
 section form {
   display: flex;
   flex-direction: column;

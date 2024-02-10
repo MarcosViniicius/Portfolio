@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
   new TypeIt(".typedtext", {
     speed: 150,
-    Strings: "web",
+    Strings: "FullStack",
     loop: true,
   })
     .type("", { delay: 1000 })
