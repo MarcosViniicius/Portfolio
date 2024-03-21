@@ -6,11 +6,29 @@
 
 header {
   background-color: #000;
-  text-align: left;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
 }
 header ul div {
-  padding-left: 15%;
+  text-align: center;
+  padding: 0;
 }
+header ul div.change-theme {
+  flex-basis: auto;
+}
+header ul div.change-theme label {
+  margin: 0;
+  flex: 0 0 auto; /* Manter o tamanho fixo */
+  margin-left: auto; /* Fixar à direita */
+}
+
 #photo {
   width: 100%;
   height: auto;
@@ -44,13 +62,9 @@ header ul div {
 }
 
 .skill-image {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 1rem 0;
-  flex-wrap: wrap;
-  margin-right: 30px;
-  margin-left: 30px;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 20px;
+  display: grid;
 }
 
 .skills #code_icon {
@@ -129,6 +143,7 @@ header ul div {
   width: 10px;
   transform: translateX(0px);
   transition: transform 0.3s linear;
+  padding-left: 15%;
 }
 
 .checkbox:checked + .label .ball {

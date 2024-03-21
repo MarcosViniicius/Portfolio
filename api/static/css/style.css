@@ -43,11 +43,15 @@ header li {
   font-size: 20px;
   padding: 20px;
   color: #fff;
+  transition: all 1s;
+  opacity: 80%;
 }
 header li:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  transition: all 1s;
+  opacity: 100%;
 }
 
 section form {
@@ -95,7 +99,7 @@ section form {
 #photo:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
-  transform: scale(1.1);
+  transform: scale(1.5);
   transition: 1s;
 }
 .icons-favicon img {
@@ -139,7 +143,6 @@ section form {
   background-color: #c1c1c1;
   flex-wrap: wrap;
   justify-content: center;
-  display: flex;
   flex-wrap: wrap;
   align-items: center;
   padding-bottom: 5em;
@@ -153,17 +156,9 @@ section form {
 }
 
 .skill-image {
-  display: flex;
-  justify-content: safe;
-  align-items: center;
+  grid-template-columns: repeat(6, 1fr);
   margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.skill-image div {
-  margin-right: 30px;
-  margin-left: 30px;
+  display: grid;
 }
 
 .skills #code_icon {
@@ -177,11 +172,16 @@ section form {
   padding-top: 30px;
   padding-bottom: 20px;
   margin: 15px;
+  transition: all 1s;
 }
 .skills img {
   padding-top: 10px;
   width: 8rem;
   height: 6rem;
+}
+
+.skills h1 {
+  padding-top: 20px;
 }
 footer {
   background-color: #808080;
@@ -198,7 +198,7 @@ footer h1 {
   text-decoration: none solid rgb(0, 0, 0);
   word-spacing: 0px;
   transform: none;
-  transition: all 0s ease 0s;
+  transition: all 1s;
 }
 .footer-content h1 {
   font-size: 2rem;
@@ -211,6 +211,7 @@ footer h1 {
   text-align: center;
   align-items: center;
   padding-top: 60px;
+  transition: all 1s;
 }
 
 .email {
@@ -261,11 +262,13 @@ footer h1 {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  transition: all 1s;
 }
 .email:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  transition: all 1s;
 }
 
 #fundo-cell {
@@ -304,12 +307,15 @@ footer h1 {
   max-width: 100%;
   -moz-transition: all 0.3s;
   -webkit-transform: all 0.3s;
-  transition: all 0.3s;
+  transition: all 1s;
+  opacity: 80%;
 }
 #code_icon:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
+  transition: all 1s;
+  opacity: 100%;
 }
 
 #favicon {
@@ -319,13 +325,13 @@ footer h1 {
   max-width: 100%;
   -moz-transition: all 0.3s;
   -webkit-transform: all 0.3s;
-  transition: all 0.3s;
+  transition: all 1s;
 }
 #favicon:hover {
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
-  transition: all 0.3s;
+  transition: all 1s;
 }
 
 /* dark theme */

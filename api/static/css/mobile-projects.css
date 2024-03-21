@@ -1,4 +1,29 @@
 /* Adicionando regra de media query para dispositivos móveis */
+
+header {
+  background-color: #000;
+  flex-direction: column;
+  text-align: center;
+  padding: 0;
+}
+header ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+header ul div {
+  text-align: center;
+  padding: 0;
+}
+header ul div.change-theme {
+  flex-basis: auto;
+}
+header ul div.change-theme label {
+  margin: 0;
+  flex: 0 0 auto; /* Manter o tamanho fixo */
+  margin-left: auto; /* Fixar à direita */
+}
 .title {
   padding: 3rem 0;
   font-size: 1.5rem;
