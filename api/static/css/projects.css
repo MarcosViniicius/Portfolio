@@ -170,23 +170,66 @@ main {
   color: var(--text-color);
 }
 
+/* Importar estilos do footer do arquivo principal */
+@import url("./style.css");
+
 .dark footer {
-  background-color: var(--footer-background-color);
+  background: linear-gradient(
+    135deg,
+    #1a1a2e 0%,
+    #16213e 50%,
+    #0f3460 100%
+  ) !important;
   color: var(--footer-text-color);
 }
 
-.dark .project {
-  background-color: var(--skills-background-color);
-  color: var(--skills-text-color);
-  box-shadow: 10px 10px 10px rgba(23, 20, 20, 0.1);
+.dark .footer-about p {
+  color: #b0c4de !important;
 }
 
-.dark .project:hover {
-  transform: translateY(-10px);
+.dark .contact-label {
+  color: #87ceeb !important;
 }
 
-.dark footer {
-  background-color: var(--footer-background-color-black);
+.dark .contact-link {
+  color: #ffffff !important;
+}
+
+.dark .contact-link:hover {
+  color: #00bfff !important;
+}
+
+.dark .contact-icon {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .contact-icon:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark .social-link {
+  background: rgba(255, 255, 255, 0.1) !important;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.dark .social-link:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: rgba(0, 191, 255, 0.5);
+  box-shadow: 0 5px 20px rgba(0, 191, 255, 0.3);
+}
+
+.dark .footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .footer-copyright p {
+  color: #b0c4de !important;
+}
+
+.dark .footer-credits {
+  color: #87ceeb !important;
 }
 .change-theme {
   float: right;

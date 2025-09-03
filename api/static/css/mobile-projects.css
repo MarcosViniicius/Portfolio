@@ -114,19 +114,71 @@ header ul div.change-theme label {
   width: 18 rem;
 }
 
-.footer-content {
-}
-
+/* Footer Mobile Styles para Projects */
 footer {
-  display: flex;
-  margin: 0;
-}
-.div-contacts {
-  display: flex;
-  margin: 0 auto;
-  padding-right: 20px;
+  padding: 2rem 0 1rem 0;
 }
 
-.email {
-  padding-right: 0;
+.footer-content {
+  padding: 0 1rem;
+}
+
+.footer-main {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: center;
+}
+
+.footer-section {
+  text-align: center;
+}
+
+.contact-item {
+  justify-content: center;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.contact-info {
+  align-items: center;
+  text-align: center;
+}
+
+.social-links {
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.social-link {
+  padding: 0.6rem 1rem;
+  width: 180px;
+  justify-content: center;
+}
+
+.social-link img {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-icon {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 0.5rem auto;
+}
+
+.contact-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+footer h3 {
+  font-size: 1.3rem;
+}
+
+.footer-about p {
+  font-size: 0.9rem;
+  line-height: 1.5;
 }

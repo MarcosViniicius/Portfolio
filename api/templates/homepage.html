@@ -10,29 +10,13 @@
     <script src="/static/js/change_theme.js" defer></script>
     <script src="/static/js/change_language.js" defer></script>
     <script src="/static/js/animated_text.js" defer></script>
+    <script src="/static/js/page_animations.js" defer></script>
     <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
     <script crossorigin="anonymous" integrify="" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
   </head>
   <body>
+  {% include 'header.html' %}
 
-    <header>
-      <ul>
-
-        <div>
-        <a id="home" href="/" class="pt"><li>Início</li></a>
-        <a href="projects" class="pt"><li>Projetos</li></a>
-    </div>
-    <div class="change-theme">
-      <input type="checkbox" class="checkbox" id="chk" />
-      <label class="label" for="chk">
-        <i class="fas fa-sun"></i>
-        <i class="fas fa-moon"></i>
-        <div class="ball"></div>
-      </label>
-    </div>
-      </ul>
-      <hr />
-    </header>
     <main>
       
       <div class="infos">
@@ -86,24 +70,7 @@ Profissional dinâmico e apaixonado por Tecnologia da Informação, com formaç�
 </main>
 
 <footer>
-  <div class="footer-content">
-    <div class="div-contacts">
-      <div class="email">
-      <div id="fundo-email">
-        <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank"><img src="/static/Images/message.svg"></a>
-      </div>
-      <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="tittle-email"><p>E-mail</p></a>
-      <a href="mailto:marcosvinicius.lucena27@gmail.com" target="_blank" id="email"><p >marcosvinicius.lucena27@gmail.com</p></a> 
-    </div>
-
-    <div class="cell">
-      <div id="fundo-cell">
-        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank"><img src="/static/Images/telefone.svg"></a>
-      </div>
-        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="tittle-cell"><p>Telefone</p></a> 
-        <a href="https://api.whatsapp.com/send?phone=5584987592270" target="_blank" id="number"><p>(84) 98759-2270</p></a> 
-    </div>
-</div>
+{% include 'footer.html' %}
 </footer>
   </body>
 </html>
