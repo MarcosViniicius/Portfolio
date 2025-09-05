@@ -1,0 +1,130 @@
+/* ===========================================
+   PORTFOLIO CSS - ARQUIVO PRINCIPAL
+   =========================================== 
+   
+   Organização modular para fácil manutenção:
+   1. Variables - Sistema de design e tokens
+   2. Base - Reset e estilos fundamentais
+   3. Components - Componentes reutilizáveis
+   4. Sections - Seções específicas do portfolio
+   5. Skills - Seção de habilidades
+   6. Timeline - Experiências e educação
+   7. Footer - Rodapé da página
+   8. Themes - Sistema de temas claro/escuro
+   9. Mobile - Estilos responsivos (importado no HTML)
+   10. Projects - Estilos específicos de projetos (separado)
+*/
+
+/* Importar arquivos CSS organizados */
+@import url("./variables.css");
+@import url("./base.css");
+@import url("./components.css");
+@import url("./sections.css");
+@import url("./skills.css");
+@import url("./timeline.css");
+@import url("./footer.css");
+@import url("./themes.css");
+
+/* ===== ESTILOS ESPECÍFICOS E OVERRIDES ===== */
+
+/* Garantir que as seções usem a classe base */
+.infos,
+.about,
+.skills,
+.experience,
+.education {
+  /* Herda estilos de .portfolio-section via @extend ou aplicação direta */
+  padding: var(--section-spacing-top) var(--content-padding-x)
+    var(--section-spacing-bottom);
+  max-width: var(--content-max-width);
+  margin: 0 auto var(--space-5xl) auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Ajustes específicos para seções que precisam de override */
+.infos {
+  background: linear-gradient(
+    135deg,
+    var(--bg-light) 0%,
+    var(--bg-light-secondary) 100%
+  );
+}
+
+.about {
+  background: linear-gradient(
+    135deg,
+    var(--bg-light) 0%,
+    var(--bg-light-secondary) 100%
+  );
+}
+
+.experience {
+  background: linear-gradient(
+    135deg,
+    var(--bg-light) 0%,
+    var(--bg-light-secondary) 100%
+  );
+}
+
+.education {
+  background: linear-gradient(
+    135deg,
+    var(--bg-light) 0%,
+    var(--bg-light-secondary) 100%
+  );
+}
+
+/* ===== UTILITÁRIOS GLOBAIS ===== */
+
+/* Classes auxiliares para manutenção */
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print styles */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  .skills,
+  .experience,
+  .education {
+    break-inside: avoid;
+  }
+}

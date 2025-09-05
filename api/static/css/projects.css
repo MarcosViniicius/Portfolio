@@ -1,40 +1,89 @@
+/* ===========================================
+   PROJECTS PAGE CSS - ESPACIAL THEME
+   =========================================== */
+
+/* ===== CSS VARIABLES ===== */
 :root {
-  --background-color: #ffffff;
-  --text-color: #000000;
-  --link-color: #0000ff;
-  --scrollbar-track-color: #ffffff;
-  --scrollbar-thumb-color: #000000;
+  /* Herda as variáveis espaciais do style.css e adiciona específicas para projetos */
 
-  --header-background-color: #000;
-  --header-text-color: #fff;
+  /* Project Card Colors - Tema Espacial */
+  --project-bg: var(--space-gray-800);
+  --project-text: var(--pure-white);
+  --project-border-radius: 12px;
+  --project-border: var(--space-blue-medium);
 
-  --skills-background-color: #c1c1c1;
-  --skills-text-color: #fff;
+  /* Grid Settings */
+  --grid-gap: 20px;
+  --grid-columns: 3;
 
-  --footer-background-color: #808080;
-  --footer-background-color-black: #17181c;
-  --footer-text-color: #fff;
-
-  --about-heading-color: #000;
-  --about-text-color: #000;
-
-  --about-link-color: #0000ff;
-
-  --button-background-color: #212121;
-  --button-text-color: #fff;
-
+  /* Animations */
   --hover-transform-scale: 1.1;
-}
+  --transition-speed: 0.3s;
+} /* ===== IMPORT STYLES ===== */
+@import url("./style.css");
 
-.title {
-  padding: 5rem 0rem 5rem 0rem;
-  font-size: 2rem;
-  text-align: center;
+/* ===== BASE LAYOUT ===== */
+main {
+  padding-bottom: 20rem;
 }
 
 .page-inner-content {
   max-width: 1280px;
   margin: 0 auto;
+}
+
+/* ===== PAGE TITLE ===== */
+.title {
+  padding: 5rem 0rem 5rem 0rem;
+  font-size: 2rem;
+  text-align: center;
+  transition: all 0.5s;
+}
+
+.title:hover {
+  transform: translateY(-10px);
+  transition: all 0.5s;
+}
+
+/* ===== PROJECTS GRID ===== */
+.cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
+/* ===== PROJECT CARDS ===== */
+.project {
+  flex: 1 1 auto;
+  min-height: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all var(--transition-speed) ease-in-out;
+  border-radius: var(--project-border-radius);
+  background-color: var(--project-bg);
+  color: var(--project-text);
+  border: 2px solid transparent;
+}
+
+.project:hover {
+  -webkit-animation: wobble-hor-bottom 0.8s both;
+  animation: wobble-hor-bottom 0.8s both;
+  border-color: var(--space-blue-light);
+  box-shadow: 0 8px 25px var(--shadow-cosmic);
+}
+
+.project:focus-visible {
+  outline: 3px solid var(--space-blue-medium);
+  outline-offset: 2px;
+}
+
+.project:hover {
+  -webkit-animation: wobble-hor-bottom 0.8s both;
+  animation: wobble-hor-bottom 0.8s both;
 }
 
 .project img {
@@ -45,38 +94,16 @@
 .project-name {
   font-size: 1.5rem;
   margin: 1rem 0;
+  text-align: center;
 }
+
 .project-desc {
   font-size: 1rem;
   margin: 1rem 0;
-}
-.cols {
-  display: flex;
-  flex-direction: wrap;
-  gap: 20px;
+  text-align: center;
 }
 
-.project {
-  flex: 1 1 auto;
-  min-height: 200px;
-  padding: 10px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 10px 10px 10px rgba(23, 20, 20, 0.1);
-  transition: all 0.3s ease-in-out;
-  border-radius: 3%;
-  background-color: var(--button-background-color);
-  color: var(--button-text-color);
-}
-
-.project:hover {
-  -webkit-animation: wobble-hor-bottom 0.8s both;
-  animation: wobble-hor-bottom 0.8s both;
-}
-
+/* ===== ANIMATIONS ===== */
 @-webkit-keyframes wobble-hor-bottom {
   0%,
   100% {
@@ -106,6 +133,7 @@
     transform: translateX(-6px) rotate(-1.2deg);
   }
 }
+
 @keyframes wobble-hor-bottom {
   0%,
   100% {
@@ -136,113 +164,20 @@
   }
 }
 
-/* .project:hover {
-  transform: translateY(-10px);
-} */
-
-.project-name,
-.project-desc {
-  text-align: center;
-}
-
-.cols {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 20px;
-}
-
-main {
-  padding-bottom: 20rem;
-}
-
-/* Dark Theme */
-.dark main {
-  background-color: black;
-}
-
-.dark header {
-  background-color: var(--header-background-color);
-  color: var(--header-text-color);
-}
-
-.dark .project-desc,
-.dark .project-name {
-  color: var(--text-color);
-}
-
-/* Importar estilos do footer do arquivo principal */
-@import url("./style.css");
-
-.dark footer {
-  background: linear-gradient(
-    135deg,
-    #1a1a2e 0%,
-    #16213e 50%,
-    #0f3460 100%
-  ) !important;
-  color: var(--footer-text-color);
-}
-
-.dark .footer-about p {
-  color: #b0c4de !important;
-}
-
-.dark .contact-label {
-  color: #87ceeb !important;
-}
-
-.dark .contact-link {
-  color: #ffffff !important;
-}
-
-.dark .contact-link:hover {
-  color: #00bfff !important;
-}
-
-.dark .contact-icon {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .contact-icon:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(255, 255, 255, 0.3);
-}
-
-.dark .social-link {
-  background: rgba(255, 255, 255, 0.1) !important;
-  border: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.dark .social-link:hover {
-  background: rgba(255, 255, 255, 0.2) !important;
-  border-color: rgba(0, 191, 255, 0.5);
-  box-shadow: 0 5px 20px rgba(0, 191, 255, 0.3);
-}
-
-.dark .footer-bottom {
-  border-top: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-.dark .footer-copyright p {
-  color: #b0c4de !important;
-}
-
-.dark .footer-credits {
-  color: #87ceeb !important;
-}
+/* ===== THEME TOGGLE ===== */
 .change-theme {
   float: right;
   margin-right: 30px;
   margin-top: -40px;
 }
+
 .checkbox {
   opacity: 0;
   position: absolute;
 }
 
 .label {
-  border: 1.67px solid #fff;
+  border: 1.67px solid var(--space-blue-medium);
   border-radius: 50px;
   cursor: pointer;
   display: flex;
@@ -253,9 +188,20 @@ main {
   height: 12px;
   width: 40px;
   transform: scale(1.5);
+  transition: all 0.3s ease;
 }
+
+.label:hover {
+  border-color: var(--space-blue-light);
+}
+
+.label:focus-within {
+  outline: 3px solid var(--space-blue-medium);
+  outline-offset: 2px;
+}
+
 .label .ball {
-  background-color: #fff;
+  background-color: var(--space-blue-primary);
   border-radius: 50%;
   position: absolute;
   top: 2px;
@@ -263,35 +209,137 @@ main {
   height: 18px;
   width: 18px;
   transform: translateX(0px);
-  transition: transform 0.3s linear;
+  transition: transform 0.3s linear, background-color 0.3s ease;
 }
 
 .checkbox:checked + .label .ball {
   transform: translateX(29px);
+  background-color: var(--space-blue-light);
 }
 
 .fa-moon {
-  color: #ffffff;
+  color: var(--space-blue-medium);
 }
+
 .fa-sun {
-  color: #ffffff;
+  color: var(--space-blue-light);
   opacity: 0;
   transition: 1s;
 }
+
+/* ===== DARK THEME ===== */
+.dark main {
+  background: var(--cosmic-gradient);
+}
+
+.dark header {
+  background: linear-gradient(
+    135deg,
+    var(--cosmic-black) 0%,
+    var(--space-gray-900) 100%
+  );
+  color: var(--text-white);
+}
+
+.dark .project {
+  background: linear-gradient(
+    135deg,
+    var(--space-gray-800) 0%,
+    var(--space-gray-700) 100%
+  );
+  color: var(--text-white);
+  border-color: var(--space-blue-medium);
+}
+
+.dark .project:hover {
+  border-color: var(--space-blue-light);
+  box-shadow: 0 12px 30px rgba(0, 71, 171, 0.3);
+}
+
+.dark .project-desc,
+.dark .project-name {
+  color: var(--text-white);
+}
+
+.dark .title {
+  color: var(--space-blue-light);
+}
+
 .dark .fa-sun {
   opacity: 1;
   transition: 1s;
+  color: var(--space-blue-light);
 }
+
 .dark .fa-moon {
   opacity: 0;
   transition: 1s;
 }
 
-.title {
-  transition: all 0.5s;
+.dark .label {
+  border-color: var(--space-blue-light);
 }
 
-.title:hover {
-  transform: translateY(-10px);
-  transition: all 0.5s;
+.dark .label .ball {
+  background-color: var(--space-blue-light);
+}
+
+/* Dark Theme - Footer Styles Espaciais */
+.dark footer {
+  background: linear-gradient(
+    135deg,
+    var(--space-gray-900) 0%,
+    var(--space-gray-800) 50%,
+    var(--space-blue-deep) 100%
+  ) !important;
+  color: var(--text-white);
+  border: 1px solid var(--space-blue-medium);
+}
+
+.dark .footer-about p {
+  color: var(--space-gray-200) !important;
+}
+
+.dark .contact-label {
+  color: var(--space-blue-pale) !important;
+}
+
+.dark .contact-link {
+  color: var(--text-white) !important;
+}
+
+.dark .contact-link:hover {
+  color: var(--space-blue-light) !important;
+}
+
+.dark .contact-icon {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.dark .contact-icon:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.dark .social-link {
+  background: rgba(59, 130, 246, 0.1) !important;
+  border: 2px solid rgba(59, 130, 246, 0.2);
+}
+
+.dark .social-link:hover {
+  background: rgba(59, 130, 246, 0.2) !important;
+  border-color: var(--space-blue-light);
+}
+
+.dark .footer-bottom {
+  border-top: 1px solid var(--space-blue-medium) !important;
+}
+
+.dark .footer-copyright p {
+  color: var(--space-gray-200) !important;
+}
+
+.dark .footer-credits {
+  color: var(--space-blue-pale) !important;
 }

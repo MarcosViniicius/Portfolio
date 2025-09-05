@@ -1,0 +1,173 @@
+/* ===========================================
+   SEÇÕES DO PORTFOLIO
+   =========================================== */
+
+/* ===== ESTRUTURA BASE PARA SEÇÕES ===== */
+.portfolio-section {
+  padding: var(--section-spacing-top) var(--content-padding-x)
+    var(--section-spacing-bottom);
+  max-width: var(--content-max-width);
+  margin: 0 auto var(--space-5xl) auto;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  background: linear-gradient(
+    135deg,
+    var(--bg-light) 0%,
+    var(--bg-light-secondary) 100%
+  );
+  border-radius: 16px;
+  box-shadow: 0 4px 20px var(--shadow-light);
+  backdrop-filter: blur(8px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Títulos de seção padrão */
+.portfolio-section h1 {
+  font-size: var(--font-size-h1);
+  font-weight: var(--font-weight-bold);
+  color: var(--space-black);
+  margin-bottom: var(--space-3xl);
+  position: relative;
+  text-align: center;
+}
+
+/* Linha decorativa dos títulos */
+.portfolio-section h1::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    var(--space-blue-deep) 0%,
+    var(--space-blue-medium) 100%
+  );
+  border-radius: 2px;
+}
+
+/* ===== SEÇÃO HERO/INFOS ===== */
+.infos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--space-4xl);
+  text-align: left;
+}
+
+.texts {
+  flex: 1;
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.texts p {
+  font-size: var(--font-size-body-large);
+  font-weight: var(--font-weight-regular);
+  color: var(--space-gray-600);
+  line-height: 1.6;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* Hierarquia visual aprimorada */
+.texts h1 {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-black);
+  color: var(--space-black);
+  margin-bottom: var(--space-sm);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--space-black) 0%,
+    var(--space-blue-deep) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(0, 71, 171, 0.15);
+}
+
+.texts h2 {
+  font-size: var(--font-size-hero);
+  font-weight: var(--font-weight-black);
+  color: var(--space-black);
+  margin-bottom: var(--space-lg);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    var(--space-black) 0%,
+    var(--space-blue-deep) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 4px 20px rgba(0, 71, 171, 0.15);
+}
+
+/* Linha decorativa para o nome "Marcos" */
+.texts h2::after {
+  content: "";
+  position: absolute;
+  bottom: -12px;
+  left: 0;
+  width: 200px;
+  height: 6px;
+  background: linear-gradient(
+    90deg,
+    var(--space-blue-deep) 0%,
+    var(--space-blue-medium) 100%
+  );
+  border-radius: 3px;
+  box-shadow: 0 2px 10px rgba(59, 130, 246, 0.3);
+}
+
+/* ===== SEÇÃO ABOUT ===== */
+.about {
+  text-align: left;
+}
+
+.about div {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-4xl);
+  overflow: visible;
+}
+
+.about img {
+  width: 20rem;
+  height: 20rem;
+  border-radius: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about img:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.about h1::after {
+  left: 0;
+  transform: none;
+}
+
+.about p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-regular);
+  color: var(--space-gray-600);
+  line-height: 1.7;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-align: left;
+  flex: 1;
+}

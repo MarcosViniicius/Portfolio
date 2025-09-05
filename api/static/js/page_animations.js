@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Função para criar partículas decorativas na página
 function createPageParticles() {
-  const main = document.querySelector("main");
+  const main = document.querySelector(".portfolio-main");
   if (!main) return;
 
   for (let i = 0; i < 15; i++) {

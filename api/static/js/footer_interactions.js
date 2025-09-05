@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Função para criar partículas decorativas (opcional)
 function createFooterParticles() {
-  const footer = document.querySelector("footer");
+  const footer = document.querySelector(".portfolio-footer");
   if (!footer) return;
 
   for (let i = 0; i < 20; i++) {

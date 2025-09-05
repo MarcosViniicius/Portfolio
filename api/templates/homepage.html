@@ -5,72 +5,248 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Início</title>
-    <link rel="stylesheet" href="/static/css/style.css"/>
-    <link rel="stylesheet" media="screen and (max-width:480px)" href="/static/css/mobile.css"/>
+    <link rel="stylesheet" href="/static/css/main.css" />
+    <link rel="stylesheet" href="/static/css/main.css" />
+      <link rel="stylesheet" href="/static/css/projects.css" />
+    <link
+      rel="stylesheet"
+      media="screen and (max-width:480px)"
+      href="/static/css/mobile.css"
+    />
     <script src="/static/js/change_theme.js" defer></script>
     <script src="/static/js/change_language.js" defer></script>
     <script src="/static/js/animated_text.js" defer></script>
     <script src="/static/js/page_animations.js" defer></script>
-    <script src="https://kit.fontawesome.com/998c60ef77.js" crossorigin="anonymous"></script>
-    <script crossorigin="anonymous" integrify="" src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/998c60ef77.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrify=""
+      src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"
+      defer
+    ></script>
   </head>
-  <body>
-  {% include 'header.html' %}
+  <body class="portfolio-body">
+  <header class="portfolio-header">{% include 'header.html' %}</header>
 
-    <main>
-      
+    <main class="portfolio-main">
       <div class="infos">
         <div class="texts">
-          <h1>Olá, eu sou o </h1>
+          <h1>Olá, eu sou o</h1>
           <h2>Marcos</h2>
-          <h3 class="typedtext" data="pt""pt">Desenvolvedor FullStack</h3>
-          <h3 class="typedtext" data="en" style="display: none">Web Developer</h3>
+          <h3 class="typedtext" data="pt">Desenvolvedor FullStack</h3>
+          <h3 class="typedtext" data="en" style="display: none">
+            Web Developer
+          </h3>
           <div class="icons-favicon">
-            <a href="https://www.instagram.com/_marcoslucena/" target="_blank" 
+            <a href="https://www.instagram.com/_marcoslucena/" target="_blank"
               ><img src="/static/Images/icon-instagram-96.png" id="favicon"
             /></a>
             <a
               href="https://www.linkedin.com/in/marcosvinicius1/"
-              target="_blank" 
+              target="_blank"
               ><img src="/static/Images/icon-linkedin-96.png" id="favicon"
             /></a>
-            <a href="https://github.com/MarcosViniicius" target="_blank" 
+            <a href="https://github.com/MarcosViniicius" target="_blank"
               ><img src="/static/Images/icon-github-96.png" id="favicon"
             /></a>
           </div>
         </div>
         <img src="/static/Images/photo.png" id="photo" />
       </div>
-      <hr />
       <div class="about">
         <h1>Sobre mim</h1>
-        <div>        
-          <p> 
-Profissional dinâmico e apaixonado por Tecnologia da Informação, com formação concluída em Ensino Médio Técnico em Informática no Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte (IFRN). Experiência sólida em linguagens de programação como Python, JavaScript, HTML, CSS, Angular e Typescript, com conhecimento em bancos de dados MySQL e SQL Server, sistemas operacionais Windows e Linux Ubuntu, redes de computadores, administração de servidores e serviços como Active Directory, além de ferramentas de virtualização e conteinerização como Docker, e controle de versão com Git e GitHub. Possuo ainda habilidades em hardware e software.
+        <div>
+          <p>
+            Profissional dinâmico e apaixonado por Tecnologia da Informação, com
+            formação concluída em Ensino Médio Técnico em Informática no
+            Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do
+            Norte (IFRN). Experiência sólida em linguagens de programação como
+            Python, JavaScript, HTML, CSS, Angular e Typescript, com
+            conhecimento em bancos de dados MySQL e SQL Server, sistemas
+            operacionais Windows e Linux Ubuntu, redes de computadores,
+            administração de servidores e serviços como Active Directory, além
+            de ferramentas de virtualização e conteinerização como Docker, e
+            controle de versão com Git e GitHub. Possuo ainda habilidades em
+            hardware e software.
           </p>
-          
         </div>
-
       </div>
-      <hr>
       <div class="skills">
         <h1>Habilidades</h1>
         <div class="skill-image">
-          <div id="code_icon"><p>CSS3</p> <img src="/static/Images/languages/css.svg"> </div>
-          <div id="code_icon"><p>JavaScript</p> <img src="/static/Images/languages/js.svg"></div>
-          <div id="code_icon"><p>TypeScript</p> <img src="/static/Images/languages/ts.svg"></div>
-          <div id="code_icon"><p>Python</p> <img src="/static/Images/languages/python.svg"></div>
-          <div id="code_icon"><p>NodeJS</p> <img src="/static/Images/languages/node.svg"></div>
-          <div id="code_icon"><p>MySql</p> <img src="/static/Images/languages/mysql.svg"></div>
-          <div id="code_icon"><p>Git</p> <img src="/static/Images/languages/git.svg"></div>
-          <div id="code_icon"><p>Docker</p> <img src="/static/Images/languages/docker.svg"></div>
+          <div id="code_icon" class="skill-card">
+            <p>CSS3</p>
+            <img src="/static/Images/languages/css.svg" alt="CSS3" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>JavaScript</p>
+            <img src="/static/Images/languages/js.svg" alt="JavaScript" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>TypeScript</p>
+            <img src="/static/Images/languages/ts.svg" alt="TypeScript" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>Python</p>
+            <img src="/static/Images/languages/python.svg" alt="Python" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>NodeJS</p>
+            <img src="/static/Images/languages/node.svg" alt="NodeJS" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>MySql</p>
+            <img src="/static/Images/languages/mysql.svg" alt="MySQL" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>Git</p>
+            <img src="/static/Images/languages/git.svg" alt="Git" />
+          </div>
+          <div id="code_icon" class="skill-card">
+            <p>Docker</p>
+            <img src="/static/Images/languages/docker.svg" alt="Docker" />
+          </div>
         </div>
       </div>
+      <div class="experience">
+        <h1>Experiências Profissionais</h1>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">2022 - 2023</div>
+            <div class="timeline-content">
+              <h3>Aprendiz técnico em informática</h3>
+              <h4>Bonor Industria de Botões do Nordeste S/A</h4>
+              <p>
+                Atuação no suporte a usuários, manutenção de hardware e software, implementação de softwares e ferramentas para otimizar processos, configuração e gerenciamento de redes locais, servidores Windows e Linux, e administração de serviços como Active Directory.
+              </p>
+              <div class="timeline-technologies">
+                <span class="tech-tag">Suporte técnico</span>
+                <span class="tech-tag">Manutenção de computadores</span>
+                <span class="tech-tag">Redes de computadores</span>
 
-</main>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2024 - Atual</div>
+            <div class="timeline-content">
+              <h3>Administrador de TI</h3>
+              <h4>Supermercado Lucena</h4>
+              <p>
+                Atuo ativamente no Help-Desk e na administração da infraestrutura
+                de TI, garantindo o funcionamento eficiente dos sistemas e redes da empresa. Atuo principalmente na resolução de problemas técnicos, manutenção de hardware e software, além de implementar melhorias para otimizar os processos internos e a segurança da informação.
+              </p>
+              <div class="timeline-technologies">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">Flask</span>
+                <span class="tech-tag">Gerenciamento de sistemas ERP</span>
+                <span class="tech-tag">Docker</span>
+                <span class="tech-tag">Redes de computadores</span>
+                <span class="tech-tag">Administração de servidores</span>    
+                <span class="tech-tag">Manutenção de computadores</span>
+                <span class="tech-tag">Suporte técnico</span>
+              </div>
+            </div>
+          </div>
 
-<footer>
-{% include 'footer.html' %}
-</footer>
+          
+
+          <!-- Placeholder para futuras experiências -->
+          <div class="timeline-item timeline-placeholder">
+            <div class="timeline-date">Futuro</div>
+            <div class="timeline-content">
+              <h3>Próximas experiências...</h3>
+              <p>
+                Esta seção será atualizada com novas experiências profissionais.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="education">
+        <h1>Formações</h1>
+        <div class="education-grid">
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-graduation-cap"></i>
+            </div>
+            <div class="education-content">
+              <h3>Ensino Médio Técnico em Informática</h3>
+              <h4>Instituto Federal do Rio Grande do Norte (IFRN)</h4>
+              <div class="education-period">2021 - 2024</div>
+              <p>
+                Formação técnica integrada ao ensino médio com foco em
+                desenvolvimento de sistemas, redes de computadores,
+                administração de sistemas operacionais e programação. Projetos
+                práticos envolvendo desenvolvimento web e mobile.
+              </p>
+              <div class="education-achievements">
+                <span class="achievement-tag">Programação</span>
+                <span class="achievement-tag">Redes de Computadores</span>
+                <span class="achievement-tag">Administração de Sistemas</span>
+                <span class="achievement-tag">Desenvolvimento Web</span>
+                <span class="achievement-tag">Banco de Dados</span>
+                <span class="achievement-tag">Linux/Windows</span>
+                <span class="achievement-tag">Git/GitHub</span>
+                <span class="achievement-tag">Hardware</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="education-item">
+            <div class="education-icon">
+              <i class="fas fa-certificate"></i>
+            </div>
+            <div class="education-content">
+              <h3>Ciência da Computação</h3>
+              <h4>Universidade Potiguar(UNP)</h4>
+              <div class="education-period">2025 - Atual</div>
+              <p>
+                Estudos abrangentes em Ciência da Computação, incluindo
+                algoritmos, estruturas de dados, programação orientada a
+                objetos, redes de computadores, infraestrutura de TI, gestão de
+                projetos, inteligência artificial, segurança da informação e
+                desenvolvimento de software. Foco em aprendizado contínuo e
+                aplicação prática de tecnologias modernas.
+              </p>
+              <div class="education-achievements">
+                <span class="achievement-tag">Algoritmos</span>
+                <span class="achievement-tag">Estruturas de Dados</span>
+                <span class="achievement-tag">Programação Orientada a Objetos</span>
+                <span class="achievement-tag">Redes de Computadores</span>
+                <span class="achievement-tag">Inteligência Artificial</span>
+                <span class="achievement-tag">Segurança da Informação</span>
+                <span class="achievement-tag">Gestão de Projetos</span>
+              </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Placeholder para futuras formações -->
+          <div class="education-item education-placeholder">
+            <div class="education-icon">
+              <i class="fas fa-university"></i>
+            </div>
+            <div class="education-content">
+              <h3>Futuras Formações</h3>
+              <h4>Em planejamento</h4>
+              <div class="education-period">Futuro</div>
+              <p>
+                Espaço reservado para futuras formações acadêmicas e
+                certificações que serão adicionadas conforme o progresso
+                profissional.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="portfolio-footer">{% include 'footer.html' %}</footer>
   </body>
 </html>

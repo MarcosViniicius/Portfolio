@@ -1,25 +1,25 @@
 /* Adicionando regra de media query para dispositivos móveis */
 
-header {
+.portfolio-header {
   background-color: #000;
   flex-direction: column;
   text-align: center;
   padding: 0;
 }
-header ul {
+.portfolio-.portfolio-header .nav-menu {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: baseline;
 }
-header ul div {
+.portfolio-.portfolio-header .nav-menu div {
   text-align: center;
   padding: 0;
 }
-header ul div.change-theme {
+.portfolio-.portfolio-header .nav-menu div.change-theme {
   flex-basis: auto;
 }
-header ul div.change-theme label {
+.portfolio-.portfolio-header .nav-menu div.change-theme label {
   margin: 0;
   flex: 0 0 auto; /* Manter o tamanho fixo */
   margin-left: auto; /* Fixar à direita */
@@ -68,7 +68,6 @@ header ul div.change-theme label {
 }
 
 .label {
-  border: 1.67px solid #fff;
   border-radius: 50px;
   cursor: pointer;
   display: flex;

@@ -1,0 +1,149 @@
+/* ===========================================
+   SISTEMA DE DESIGN - VARIÁVEIS CSS
+   =========================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Fragment+Mono&display=swap");
+
+:root {
+  /* ===== LAYOUT E CONTAINER ===== */
+  --container-width: 1200px;
+  --gap: 1rem;
+  --radius: 10px;
+  --accent: rgba(255, 255, 255, 0.18);
+  --muted: #6b7280;
+  --footer-padding-vertical: 2.25rem;
+  --footer-padding-horizontal: 1.5rem;
+  --footer-radius: 12px;
+
+  /* ===== SISTEMA DE HIERARQUIA VISUAL ===== */
+  /* Tamanhos de Fonte Sistematizados */
+  --font-size-hero: 3.5rem; /* 56px - Nome principal "Marcos" */
+  --font-size-h1: 2.5rem; /* 40px - Títulos principais de seção */
+  --font-size-h2: 2rem; /* 32px - Subtítulos importantes */
+  --font-size-h3: 1.5rem; /* 24px - Títulos de subsecções */
+  --font-size-body-large: 1.25rem; /* 20px - Texto destacado */
+  --font-size-body: 1rem; /* 16px - Texto padrão */
+  --font-size-small: 0.875rem; /* 14px - Texto auxiliar */
+  --font-size-xs: 0.75rem; /* 12px - Legendas */
+
+  /* Pesos de Fonte para Hierarquia */
+  --font-weight-black: 900; /* Peso máximo para hero */
+  --font-weight-bold: 700; /* Títulos principais */
+  --font-weight-semibold: 600; /* Subtítulos */
+  --font-weight-medium: 500; /* Texto destacado */
+  --font-weight-regular: 400; /* Texto padrão */
+  --font-weight-light: 300; /* Texto secundário */
+
+  /* ===== SISTEMA DE ESPAÇAMENTO (Baseado em 8px) ===== */
+  --space-xs: 0.25rem; /* 4px */
+  --space-sm: 0.5rem; /* 8px */
+  --space-md: 1rem; /* 16px */
+  --space-lg: 1.5rem; /* 24px */
+  --space-xl: 2rem; /* 32px */
+  --space-2xl: 2.5rem; /* 40px */
+  --space-3xl: 3rem; /* 48px */
+  --space-4xl: 4rem; /* 64px */
+  --space-5xl: 5rem; /* 80px */
+  --space-6xl: 6rem; /* 96px */
+
+  /* Espaçamentos Específicos para Seções */
+  --section-spacing-top: var(--space-5xl); /* 80px entre seções */
+  --section-spacing-bottom: var(--space-4xl); /* 64px após seções */
+  --content-spacing: var(--space-xl); /* 32px entre elementos de conteúdo */
+  --element-spacing: var(--space-lg); /* 24px entre elementos relacionados */
+
+  /* ===== SISTEMA DE ALINHAMENTO E LAYOUT ===== */
+  --content-max-width: 1200px; /* Largura máxima do conteúdo */
+  --content-padding-x: var(--space-xl); /* Padding horizontal das seções */
+  --content-padding-y: var(--space-3xl); /* Padding vertical das seções */
+
+  /* ===== PALETA ESPACIAL - CORES PRINCIPAIS ===== */
+  /* Azuis Espaciais */
+  --space-blue-deep: #0047ab; /* Azul espacial profundo */
+  --space-blue-primary: #1e3a8a; /* Azul espacial principal */
+  --space-blue-medium: #3b82f6; /* Azul espacial médio */
+  --space-blue-light: #60a5fa; /* Azul espacial claro */
+  --space-blue-pale: #dbeafe; /* Azul espacial pálido */
+
+  /* Pretos e Cinzas */
+  --cosmic-black: #000000; /* Preto cósmico */
+  --space-black: #000000; /* Alias para preto cósmico */
+  --space-gray-dark: #374151; /* Cinza escuro para textos */
+  --space-gray-900: #111827; /* Cinza espacial escuro */
+  --space-gray-800: #1f2937; /* Cinza espacial */
+  --space-gray-700: #374151; /* Cinza espacial médio */
+  --space-gray-600: #4b5563; /* Cinza espacial claro */
+  --space-gray-400: #9ca3af; /* Cinza espacial muito claro */
+  --space-gray-200: #e5e7eb; /* Cinza quase branco */
+
+  /* Brancos */
+  --pure-white: #ffffff; /* Branco puro */
+  --space-white: #f9fafb; /* Branco espacial */
+  --off-white: #f3f4f6; /* Branco suave */
+
+  /* Sistema de cores principal - Padronizado e consistente */
+  --primary-color: var(--space-blue-primary);
+  --primary-dark: var(--space-blue-deep);
+  --primary-light: var(--space-blue-medium);
+  --secondary-color: var(--space-blue-light);
+  --accent-color: var(--space-blue-pale);
+
+  /* Gradientes espaciais */
+  --primary-gradient: linear-gradient(
+    135deg,
+    var(--space-blue-deep) 0%,
+    var(--space-blue-primary) 100%
+  );
+  --secondary-gradient: linear-gradient(
+    135deg,
+    var(--space-blue-medium),
+    var(--space-blue-light)
+  );
+  --interactive-gradient: linear-gradient(
+    135deg,
+    var(--space-blue-primary) 0%,
+    var(--space-blue-deep) 100%
+  );
+  --cosmic-gradient: linear-gradient(
+    135deg,
+    var(--cosmic-black) 0%,
+    var(--space-gray-900) 100%
+  );
+
+  /* Cores de texto - Alta legibilidade e contraste */
+  --text-primary: var(--space-gray-900);
+  --text-secondary: var(--space-gray-600);
+  --text-muted: var(--space-gray-400);
+  --text-light: var(--space-gray-200);
+  --text-white: var(--pure-white);
+
+  /* Backgrounds consistentes */
+  --bg-light: var(--pure-white);
+  --bg-light-secondary: var(--space-white);
+  --bg-medium: var(--off-white);
+  --bg-dark: var(--space-gray-900);
+  --bg-dark-secondary: var(--space-gray-800);
+
+  /* Sombras espaciais */
+  --shadow-light: rgba(0, 0, 0, 0.05);
+  --shadow-medium: rgba(0, 0, 0, 0.1);
+  --shadow-heavy: rgba(0, 0, 0, 0.15);
+  --shadow-cosmic: rgba(0, 71, 171, 0.2);
+  --shadow-blue: rgba(30, 58, 138, 0.15);
+
+  /* Estados interativos consistentes */
+  --interactive-bg: rgba(30, 58, 138, 0.08);
+  --interactive-bg-hover: rgba(30, 58, 138, 0.15);
+  --interactive-border: rgba(30, 58, 138, 0.25);
+  --interactive-shadow: var(--shadow-blue);
+
+  /* Cores de foco para acessibilidade */
+  --focus-ring: rgba(102, 126, 234, 0.5);
+  --focus-outline: 3px solid var(--focus-ring);
+
+  /* ===== RESPONSIVIDADE - BREAKPOINTS ===== */
+  --breakpoint-mobile: 480px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+  --breakpoint-large: 1200px;
+}

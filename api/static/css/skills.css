@@ -1,0 +1,113 @@
+/* ===========================================
+   SEÇÃO DE HABILIDADES (SKILLS)
+   =========================================== */
+
+.skills {
+  background: linear-gradient(
+    135deg,
+    var(--bg-dark) 0%,
+    var(--bg-dark-secondary) 100%
+  );
+  text-align: center;
+}
+
+/* Container dos ícones de skills */
+.skill-image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
+  gap: var(--space-2xl);
+  margin-top: var(--space-lg);
+  padding: var(--space-xl);
+  justify-content: center;
+  align-items: center;
+}
+
+/* Cartões individuais de skills */
+#code_icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-lg);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1) 0%,
+    rgba(255, 255, 255, 0.05) 100%
+  );
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  width: 160px;
+  height: 160px;
+  cursor: pointer;
+  backdrop-filter: blur(10px);
+}
+
+/* Efeito de hover melhorado */
+#code_icon:hover {
+  transform: translateY(-8px) scale(1.02);
+  border-color: var(--space-blue-medium);
+  background: linear-gradient(
+    135deg,
+    rgba(59, 130, 246, 0.15) 0%,
+    rgba(147, 197, 253, 0.1) 100%
+  );
+  box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2),
+    0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+/* Efeito de brilho sutil */
+#code_icon::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    45deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transform: rotate(45deg) translate(-100%, -100%);
+  transition: transform 0.6s ease;
+}
+
+#code_icon:hover::before {
+  transform: rotate(45deg) translate(100%, 100%);
+}
+
+/* Texto dos cartões */
+#code_icon p {
+  font-size: var(--font-size-body);
+  font-weight: var(--font-weight-semibold);
+  color: var(--space-white);
+  margin-bottom: var(--space-md);
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+#code_icon:hover p {
+  color: var(--space-blue-light);
+  text-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+}
+
+/* Ícones individuais */
+#code_icon img {
+  width: 4rem;
+  height: 4rem;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  filter: brightness(1.1) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+  position: relative;
+  z-index: 2;
+}
+
+#code_icon:hover img {
+  transform: scale(1.1) rotate(5deg);
+  filter: brightness(1.3) drop-shadow(0 8px 16px rgba(59, 130, 246, 0.2));
+}

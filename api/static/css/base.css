@@ -1,0 +1,145 @@
+/* ===========================================
+   ESTILOS BASE E RESET
+   =========================================== */
+
+/* Reset e estilos base */
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Fragment Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    "Roboto Mono", monospace;
+  scroll-behavior: smooth;
+}
+
+/* Scrollbar personalizada */
+.portfolio-body::-webkit-scrollbar {
+  width: 18px;
+  height: 1px;
+}
+
+.portfolio-body::-webkit-scrollbar-track {
+  background: var(--pure-white);
+}
+
+.portfolio-body::-webkit-scrollbar-thumb {
+  background-color: var(--space-blue-primary);
+  border-radius: 20px;
+  border: 3px solid var(--pure-white);
+}
+
+/* Body e Main */
+.portfolio-body {
+  color: var(--text-primary);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  background: linear-gradient(
+    135deg,
+    var(--pure-white) 0%,
+    var(--space-white) 100%
+  );
+  background-attachment: fixed;
+  position: relative;
+}
+
+/* Efeito sutil de partículas para o tema claro */
+.portfolio-body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(30, 58, 138, 0.02) 0%,
+      transparent 50%
+    ),
+    radial-gradient(rgba(59, 130, 246, 0.02) 0%, transparent 50%),
+    radial-gradient(
+      circle at 40% 60%,
+      rgba(96, 165, 250, 0.01) 0%,
+      transparent 50%
+    );
+  background-size: 200px 200px, 150px 150px, 300px 300px;
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: -1;
+  animation: lightParticles 30s linear infinite;
+}
+
+@keyframes lightParticles {
+  0% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
+
+.portfolio-main {
+  background-color: var(--bg-light);
+  transition: background-color 0.45s ease, color 0.45s ease;
+  scroll-behavior: smooth;
+  border-radius: 0 0 var(--footer-radius) var(--footer-radius);
+  box-shadow: 0 0 20px var(--shadow-light);
+  overflow: hidden;
+}
+
+/* Estilos de foco padronizados */
+*:focus-visible {
+  outline: var(--focus-outline);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ===== TEMA ESCURO ===== */
+.dark-theme.portfolio-body {
+  background: linear-gradient(
+    135deg,
+    var(--cosmic-black) 0%,
+    var(--space-gray-900) 100%
+  );
+  color: var(--text-white);
+}
+
+.dark-theme.portfolio-body::before {
+  background-image: radial-gradient(
+      circle at 20% 20%,
+      rgba(96, 165, 250, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(30, 58, 138, 0.1) 0%,
+      transparent 50%
+    );
+  background-size: 200px 200px, 150px 150px;
+  animation: darkParticles 25s linear infinite;
+}
+
+@keyframes darkParticles {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-30px) rotate(360deg);
+  }
+}
+
+.dark-theme.portfolio-body::-webkit-scrollbar-thumb {
+  background-color: var(--space-blue-light);
+  border: 3px solid var(--cosmic-black);
+}
+
+.dark-theme.portfolio-body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--space-blue-medium);
+}
+
+.dark-theme .portfolio-main {
+  background-color: var(--space-gray-800);
+  box-shadow: 0 0 20px var(--shadow-cosmic);
+}
