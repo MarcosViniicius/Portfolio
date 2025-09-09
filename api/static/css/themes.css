@@ -215,7 +215,7 @@
 }
 
 /* Melhorias nos cards para tema claro */
-.portfolio-body:not(.dark-theme) #code_icon {
+.portfolio-body:not(.dark-theme) .code-icon {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.9) 0%,
@@ -225,7 +225,7 @@
   backdrop-filter: blur(10px);
 }
 
-.portfolio-body:not(.dark-theme) #code_icon:hover {
+.portfolio-body:not(.dark-theme) .code-icon:hover {
   background: linear-gradient(
     135deg,
     rgba(255, 255, 255, 0.95) 0%,
@@ -236,12 +236,12 @@
     0 5px 15px rgba(59, 130, 246, 0.1);
 }
 
-.portfolio-body:not(.dark-theme) #code_icon p {
+.portfolio-body:not(.dark-theme) .code-icon p {
   color: var(--space-gray-700);
   font-weight: var(--font-weight-bold);
 }
 
-.portfolio-body:not(.dark-theme) #code_icon:hover p {
+.portfolio-body:not(.dark-theme) .code-icon:hover p {
   color: var(--space-blue-deep);
 }
 
@@ -413,7 +413,7 @@
 }
 
 /* Melhorias para os ícones de habilidades no modo escuro */
-.dark-theme .skills #code_icon {
+.dark-theme .skills .code-icon {
   background: linear-gradient(
     135deg,
     rgba(31, 41, 55, 0.8) 0%,
@@ -425,7 +425,7 @@
   backdrop-filter: blur(15px);
 }
 
-.dark-theme .skills #code_icon:hover {
+.dark-theme .skills .code-icon:hover {
   background: linear-gradient(
     135deg,
     rgba(59, 130, 246, 0.2) 0%,
@@ -437,25 +437,25 @@
   transform: translateY(-8px) scale(1.02);
 }
 
-.dark-theme .skills #code_icon p {
+.dark-theme .skills .code-icon p {
   color: var(--space-blue-light);
   text-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
-.dark-theme .skills #code_icon:hover p {
+.dark-theme .skills .code-icon:hover p {
   color: var(--space-white);
   text-shadow: 0 0 15px rgba(147, 197, 253, 0.5);
 }
 
-.dark-theme .skills #code_icon img {
+.dark-theme .skills .code-icon img {
   filter: brightness(1.2) drop-shadow(0 4px 8px rgba(59, 130, 246, 0.2));
 }
 
-.dark-theme .skills #code_icon:hover img {
+.dark-theme .skills .code-icon:hover img {
   filter: brightness(1.4) drop-shadow(0 8px 16px rgba(59, 130, 246, 0.4));
 }
 
-.dark-theme .skills #code_icon::before {
+.dark-theme .skills .code-icon::before {
   background: linear-gradient(
     45deg,
     transparent,

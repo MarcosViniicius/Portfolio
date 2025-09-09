@@ -15,32 +15,29 @@
       <h3>Contato</h3>
       <div class="contact-item">
         <div class="contact-icon">
-          <img src="/static/Images/message.svg" alt="E-mail" />
+          <img src="/static/Images/socialmedias/message.svg" alt="E-mail" />
         </div>
         <div class="contact-info">
           <span class="contact-label">E-mail</span>
-          <a
-            href="mailto:marcosvinicius.lucena27@gmail.com"
-            class="contact-link"
-          >
-            marcosvinicius.lucena27@gmail.com
+          <a href="{{ url_for('send_email') }}">
+            Clique para enviar um e-mail
           </a>
         </div>
       </div>
 
       <div class="contact-item">
         <div class="contact-icon">
-          <img src="/static/Images/telefone.svg" alt="Telefone" />
+          <img src="/static/Images/socialmedias/telephone.svg" alt="Telefone" />
         </div>
         <div class="contact-info">
           <span class="contact-label">WhatsApp</span>
           <a
-            href="https://api.whatsapp.com/send?phone=5584987592270"
+            href="{{ url_for('send_message') }}"
             target="_blank"
             rel="noopener noreferrer"
             class="contact-link"
           >
-            (84) 98759-2270
+            Clique para enviar uma mensagem
           </a>
         </div>
       </div>
@@ -57,7 +54,7 @@
           class="social-link"
           aria-label="GitHub"
         >
-          <img src="/static/Images/icon-github-96.png" alt="GitHub" />
+          <img src="/static/Images/socialmedias/github.webp" alt="GitHub" />
           <span>GitHub</span>
         </a>
 
@@ -68,7 +65,7 @@
           class="social-link"
           aria-label="LinkedIn"
         >
-          <img src="/static/Images/icon-linkedin-96.png" alt="LinkedIn" />
+          <img src="/static/Images/socialmedias/linkedin.webp" alt="LinkedIn" />
           <span>LinkedIn</span>
         </a>
 
@@ -79,7 +76,10 @@
           class="social-link"
           aria-label="Instagram"
         >
-          <img src="/static/Images/icon-instagram-96.png" alt="Instagram" />
+          <img
+            src="/static/Images/socialmedias/instagram.webp"
+            alt="Instagram"
+          />
           <span>Instagram</span>
         </a>
       </div>
@@ -93,7 +93,18 @@
         &copy; <span id="current-year">2024</span> Marcos Vinícius. Todos os
         direitos reservados.
       </p>
-      <p class="footer-credits">Desenvolvido com ❤️ por Marcos Vinícius</p>
+      <p class="footer-credits">
+        Desenvolvido em<a
+          href="https://flask.palletsprojects.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><img
+            class="flask-logo"
+            src="/static/Images/languages/flask.webp"
+            alt="Flask"
+        /></a>
+        com ❤️ por <u>Marcos Vinicius</u>
+      </p>
     </div>
   </div>
 </div>

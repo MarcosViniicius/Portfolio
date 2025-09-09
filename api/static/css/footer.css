@@ -233,6 +233,16 @@
   color: var(--space-blue-primary);
   font-weight: var(--font-weight-medium);
 }
+.flask-logo {
+  width: 70px;
+  height: 30px;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+  filter: brightness(0.8);
+  position: relative;
+
+  /* filter: invert(75%); */
+}
 
 /* ===== TEMA ESCURO ===== */
 .dark-theme .portfolio-footer {
@@ -277,6 +287,10 @@
 
 .dark-theme .footer-bottom {
   border-top-color: rgba(59, 130, 246, 0.3);
+}
+
+.dark-theme .flask-logo {
+  filter: invert(100%);
 }
 
 /* ===== RESPONSIVIDADE ===== */

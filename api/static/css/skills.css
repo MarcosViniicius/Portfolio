@@ -15,7 +15,7 @@
 .skill-image {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 160px));
-  gap: var(--space-2xl);
+  gap: 5rem;
   margin-top: var(--space-lg);
   padding: var(--space-xl);
   justify-content: center;
@@ -23,7 +23,7 @@
 }
 
 /* Cartões individuais de skills */
-#code_icon {
+.code-icon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -46,7 +46,7 @@
 }
 
 /* Efeito de hover melhorado */
-#code_icon:hover {
+.code-icon:hover {
   transform: translateY(-8px) scale(1.02);
   border-color: var(--space-blue-medium);
   background: linear-gradient(
@@ -59,7 +59,7 @@
 }
 
 /* Efeito de brilho sutil */
-#code_icon::before {
+.code-icon::before {
   content: "";
   position: absolute;
   top: -50%;
@@ -76,12 +76,12 @@
   transition: transform 0.6s ease;
 }
 
-#code_icon:hover::before {
+.code-icon:hover::before {
   transform: rotate(45deg) translate(100%, 100%);
 }
 
 /* Texto dos cartões */
-#code_icon p {
+.code-icon p {
   font-size: var(--font-size-body);
   font-weight: var(--font-weight-semibold);
   color: var(--space-white);
@@ -92,13 +92,13 @@
   transition: all 0.3s ease;
 }
 
-#code_icon:hover p {
+.code-icon:hover p {
   color: var(--space-blue-light);
   text-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
 }
 
 /* Ícones individuais */
-#code_icon img {
+.code-icon img {
   width: 4rem;
   height: 4rem;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
@@ -107,7 +107,7 @@
   z-index: 2;
 }
 
-#code_icon:hover img {
+.code-icon:hover img {
   transform: scale(1.1) rotate(5deg);
   filter: brightness(1.3) drop-shadow(0 8px 16px rgba(59, 130, 246, 0.2));
 }

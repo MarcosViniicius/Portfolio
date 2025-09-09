@@ -93,6 +93,8 @@ ipython_config.py
 # Virtual environments
 .venv
 venv/
+.venvlinux
+venvlinux/
 env/
 ENV/
 env.bak/

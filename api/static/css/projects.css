@@ -183,6 +183,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: 2rem;
   padding: 5px;
   position: relative;
   height: 12px;

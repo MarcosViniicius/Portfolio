@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Animação de entrada para ícones de skills
-  const skillIcons = document.querySelectorAll("#code_icon, #favicon");
+  const skillIcons = document.querySelectorAll(".code-icon, .favicon-icon");
   skillIcons.forEach((icon, index) => {
     icon.style.opacity = "0";
     icon.style.transform = "scale(0.8)";
@@ -91,97 +91,97 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Adicionar efeito de partículas na página (opcional, leve)
-  if (window.innerWidth > 768) {
-    createPageParticles();
-  }
+  // if (window.innerWidth > 768) {
+  //   // createPageParticles();
+  // }
 });
 
 // Função para criar partículas decorativas na página
-function createPageParticles() {
-  const main = document.querySelector(".portfolio-main");
-  if (!main) return;
+// function createPageParticles() {
+//   const main = document.querySelector(".portfolio-main");
+//   if (!main) return;
 
-  for (let i = 0; i < 15; i++) {
-    const particle = document.createElement("div");
-    particle.className = "page-particle";
-    particle.style.cssText = `
-            position: absolute;
-            width: 3px;
-            height: 3px;
-            background: rgba(0, 0, 0, 0.1);
-            border-radius: 50%;
-            pointer-events: none;
-            animation: float ${4 + Math.random() * 3}s ease-in-out infinite;
-            left: ${Math.random() * 100}%;
-            top: ${Math.random() * 100}%;
-            animation-delay: ${Math.random() * 3}s;
-            z-index: 0;
-        `;
-    main.appendChild(particle);
-  }
-}
+//   for (let i = 0; i < 15; i++) {
+//     const particle = document.createElement("div");
+//     particle.className = "page-particle";
+//     particle.style.cssText = `
+//             position: absolute;
+//             width: 3px;
+//             height: 3px;
+//             background: rgba(0, 0, 0, 0.1);
+//             border-radius: 50%;
+//             pointer-events: none;
+//             animation: float ${4 + Math.random() * 3}s ease-in-out infinite;
+//             left: ${Math.random() * 100}%;
+//             top: ${Math.random() * 100}%;
+//             animation-delay: ${Math.random() * 3}s;
+//             z-index: 0;
+//         `;
+//     main.appendChild(particle);
+//   }
+// }
 
 // Adicionar CSS para animações via JavaScript
-const pageStyle = document.createElement("style");
-pageStyle.textContent = `
-    .ripple {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.1);
-        transform: scale(0);
-        animation: ripple-animation 0.6s linear;
-        pointer-events: none;
-        z-index: 10;
-    }
+// const pageStyle = document.createElement("style");
+// pageStyle.textContent = `
+//     .ripple {
+//         position: absolute;
+//         border-radius: 50%;
+//         background: rgba(0, 0, 0, 0.1);
+//         transform: scale(0);
+//         animation: ripple-animation 0.6s linear;
+//         pointer-events: none;
+//         z-index: 10;
+//     }
 
-    @keyframes ripple-animation {
-        to {
-            transform: scale(4);
-            opacity: 0;
-        }
-    }
+//     @keyframes ripple-animation {
+//         to {
+//             transform: scale(4);
+//             opacity: 0;
+//         }
+//     }
 
-    .tooltip {
-        position: absolute;
-        background: rgba(0, 0, 0, 0.8);
-        color: white;
-        padding: 5px 10px;
-        border-radius: 4px;
-        font-size: 12px;
-        opacity: 0;
-        transition: opacity 0.3s;
-        pointer-events: none;
-        z-index: 1000;
-    }
+//     .tooltip {
+//         position: absolute;
+//         background: rgba(0, 0, 0, 0.8);
+//         color: white;
+//         padding: 5px 10px;
+//         border-radius: 4px;
+//         font-size: 12px;
+//         opacity: 0;
+//         transition: opacity 0.3s;
+//         pointer-events: none;
+//         z-index: 1000;
+//     }
 
-    .tooltip.show {
-        opacity: 1;
-    }
+//     .tooltip.show {
+//         opacity: 1;
+//     }
 
-    .tooltip::after {
-        content: '';
-        position: absolute;
-        top: 100%;
-        left: 50%;
-        margin-left: -5px;
-        border-width: 5px;
-        border-style: solid;
-        border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
-    }
+//     .tooltip::after {
+//         content: '';
+//         position: absolute;
+//         top: 100%;
+//         left: 50%;
+//         margin-left: -5px;
+//         border-width: 5px;
+//         border-style: solid;
+//         border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+//     }
 
-    @keyframes float {
-        0%, 100% { transform: translateY(0px) rotate(0deg); }
-        33% { transform: translateY(-10px) rotate(120deg); }
-        66% { transform: translateY(5px) rotate(240deg); }
-    }
+//     @keyframes float {
+//         0%, 100% { transform: translateY(0px) rotate(0deg); }
+//         33% { transform: translateY(-10px) rotate(120deg); }
+//         66% { transform: translateY(5px) rotate(240deg); }
+//     }
 
-    .page-particle {
-        z-index: 0;
-    }
+//     .page-particle {
+//         z-index: 0;
+//     }
 
-    main {
-        position: relative;
-        overflow: hidden;
-    }
-`;
+//     main {
+//         position: relative;
+//         overflow: hidden;
+//     }
+// `;
 document.head.appendChild(pageStyle);
